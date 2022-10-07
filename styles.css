@@ -1,0 +1,268 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+.btn-text {
+  position: absolute;
+  top: 18px;
+  left: 194px;
+  line-height: 24px;
+  display: inline-block;
+}
+.purchase-btn-div {
+  position: absolute;
+  top: 259px;
+  left: 0;
+  border-radius: var(--br-sm);
+  background-color: var(--color-turquoise-100);
+  box-shadow: var(--shadow-sm);
+  width: 508px;
+  height: 60px;
+  overflow: hidden;
+  font-size: var(--font-size-base);
+  color: var(--white);
+  font-family: var(--font-verdana);
+}
+.item-price-2 {
+  top: 114px;
+  left: 486px;
+  font-size: var(--font-size-lg);
+  line-height: 24px;
+  text-align: right;
+}
+.item-name-2,
+.item-price-2,
+.remove-item-btn {
+  position: absolute;
+  display: inline-block;
+}
+.remove-item-btn {
+  top: 118px;
+  left: 48px;
+  font-size: var(--font-size-sm);
+  line-height: 24px;
+  font-family: var(--font-verdana);
+  color: var(--color-gray-300);
+  width: 77px;
+  height: 22px;
+}
+.item-name-2 {
+  top: 120px;
+  left: 0;
+  line-height: 16.8px;
+}
+.item-price-1 {
+  top: 81px;
+  left: 485px;
+  font-size: var(--font-size-lg);
+  line-height: 24px;
+  text-align: right;
+}
+.item-name-1,
+.item-price-1,
+.remove-item-btn1 {
+  position: absolute;
+  display: inline-block;
+}
+.remove-item-btn1 {
+  top: 79px;
+  left: 56px;
+  font-size: var(--font-size-sm);
+  line-height: 24px;
+  font-family: var(--font-verdana);
+  color: var(--color-gray-300);
+  width: 77px;
+  height: 22px;
+}
+.item-name-1 {
+  top: 81px;
+  left: 0;
+  line-height: 16.8px;
+}
+.divider3 {
+  position: absolute;
+  top: 167px;
+  left: -1px;
+  border-top: 2px solid var(--color-gray-700);
+  box-sizing: border-box;
+  width: 506px;
+  height: 2px;
+}
+.total-price-text {
+  top: 182px;
+  left: 0;
+  line-height: 24px;
+  color: var(--color-gray-900);
+  width: 358px;
+}
+.title-div,
+.total-price-div,
+.total-price-text {
+  position: absolute;
+  display: inline-block;
+}
+.total-price-div {
+  top: 182px;
+  left: 133px;
+  font-size: var(--font-size-lg);
+  line-height: 24px;
+  color: var(--color-gray-900);
+  text-align: right;
+  width: 371px;
+}
+.title-div {
+  top: 0;
+  left: 209px;
+  line-height: 16.8px;
+}
+.checkout-section-div {
+  position: absolute;
+  top: 789px;
+  left: 46px;
+  width: 508px;
+  height: 319px;
+  font-size: var(--font-size-2xl);
+  
+}
+.divider4 {
+  position: absolute;
+  top: 139.5px;
+  left: 3.5px;
+  border-top: 1px solid var(--color-gray-200);
+  box-sizing: border-box;
+  width: 505px;
+  height: 1px;
+}
+.text-div3 {
+  position: absolute;
+  top: 11px;
+  left: 12px;
+  line-height: 24px;
+  font-weight: 200;
+  display: inline-block;
+  width: 27px;
+  height: 28.5px;
+}
+.add-btn-div3,
+.ellipse-icon3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+}
+.add-btn-div3 {
+  top: 8px;
+  left: 458px;
+  text-align: center;
+  color: var(--color-gray-600);
+  font-family: var(--font-inter);
+}
+.item-description-div3,
+.item-price-div3 {
+  position: absolute;
+  top: 65px;
+  left: 100px;
+  font-size: var(--font-size-lg);
+  line-height: 24px;
+  display: inline-block;
+}
+.item-description-div3 {
+  top: 33px;
+  left: 101px;
+  font-size: var(--font-size-base);
+  color: var(--color-gray-400);
+  width: 358px;
+}
+.item-graphic-div3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: var(--font-size-6xl);
+  letter-spacing: -0.02em;
+  line-height: 98.4px;
+  font-family: var(--font-inter);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 89px;
+  opacity: 0.72;
+}
+.item-title-div3 {
+  position: absolute;
+  top: 7.2px;
+  left: 101px;
+  font-size: var(--font-size-2xl);
+  line-height: 16.8px;
+  display: inline-block;
+}
+.item-1-div1,
+.item-2-div1,
+.item-3-div1 {
+  position: relative;
+  top: 604px;
+  left: 46px;
+  width: 508px;
+  height: 140px;
+}
+.item-1-div1,
+.item-2-div1 {
+  top: 419px;
+}
+.item-1-div1 {
+  top: 234px;
+}
+.ferks-guare-kezdwfyd-ow-unspla-icon1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 600px;
+  height: 400px;
+  object-fit: cover;
+}
+.bg-img-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--white);
+  width: 600px;
+  height: 167px;
+  overflow: hidden;
+}
+.jimmys-diner-div1,
+.the-best-burgers-and-pizzas-in1 {
+  position: absolute;
+  top: 56px;
+  left: 46px;
+  line-height: 24px;
+  display: inline-block;
+}
+.the-best-burgers-and-pizzas-in1 {
+  top: 96px;
+  font-size: var(--font-size-xl);
+  line-height: 13.8px;
+}
+.header-div1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 600px;
+  height: 167px;
+  text-align: center;
+  font-size: var(--font-size-4xl);
+  color: var(--white);
+}
+.pre-checkout-state-div {
+  position: relative;
+  background-color: var(--white);
+  width: 50%;
+  height: 1161px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-3xl);
+  color: var(--color-black);
+  font-family: var(--font-smythe);
+  margin: auto;
+}
