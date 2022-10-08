@@ -2,6 +2,9 @@ body {
   margin: 0;
   line-height: normal;
 }
+.hidden {
+  display: none;
+}
 .btn-text {
   position: absolute;
   top: 18px;
