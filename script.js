@@ -2,25 +2,31 @@ import {menuArray} from "./data.js"
 
 
 document.addEventListener('click', function(e){
+ // console.log(e.target.dataset.order)
     if(e.target.dataset.order){
+     // console.log("workim")
        handleOrder(e.target.dataset.order) 
-    }
-    else if(e.target.dataset.retweet){
-        handleRetweetClick(e.target.dataset.retweet)
-    }
-    else if(e.target.dataset.reply){
-        handleReplyClick(e.target.dataset.reply)
     }
     
 })
 
-const order = []
+let order = []
 
 function handleOrder(id) {
-
+//console.log(id)
   menuArray.forEach((item) => {
-    if(item.id === id) {
-      order.push(item)
+    
+    if(item.id == id) {
+
+      let newObj = {}
+      newObj = item
+      //console.log(item)
+      order.push(newObj)
+      
+      
+      
+      
+      
     }
   })
   renderOrder()
@@ -28,24 +34,26 @@ function handleOrder(id) {
 }
 
 function renderOrder() {
+  //console.log("here")
   let orderHtml = ``
-  if(order.lenght) {
+  if(order.length) {
     order.forEach((ord) => {
+     // console.log(ord)
       orderHtml += `<div class="item-price-2">$ ${ord.price}</div>
         <div class="remove-item-btn">remove</div>
         <div class="item-name-2">${ord.name}</div>`
       
       
     })
-
+console.log(orderHtml)
     document.getElementById('order-feed').innerHTML = orderHtml
   }
   
 }
 
 function showOrder() {
-  if(ordr.length) {
-    document.getElementById("order-feed").classList.toggle('hidden') 
+  if(order.length) {
+    document.getElementById("checko").classList.toggle('hidden') 
   }
 }
 
