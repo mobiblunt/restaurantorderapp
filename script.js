@@ -7,10 +7,21 @@ document.addEventListener('click', function(e){
      // console.log("workim")
        handleOrder(e.target.dataset.order) 
     }
+
+    if(e.target.dataset.idd){
+      removeOrder(e.target.dataset.idd)
+      //console.log(e.target.dataset.idd)
+    }
     
 })
 
 let order = []
+
+let isShown = false
+
+let total = []
+
+let totalStng = ""
 
 function handleOrder(id) {
 //console.log(id)
@@ -33,27 +44,55 @@ function handleOrder(id) {
   
 }
 
+function removeOrder(id) {
+  order = order.filter((ord) => {
+    ord.id != id
+    
+  })
+  //console.log(order.length)
+  renderOrder()
+  }
+
 function renderOrder() {
-  //console.log("here")
+  
   let orderHtml = ``
   if(order.length) {
     order.forEach((ord) => {
      // console.log(ord)
       orderHtml += `<div class="item-price-2">$ ${ord.price}</div>
-        <div class="remove-item-btn">remove</div>
+        <div class="remove-item-btn" data-idd="${ord.id}">remove</div>
         <div class="item-name-2">${ord.name}</div>`
       
       
     })
-console.log(orderHtml)
+//console.log(orderHtml)
     document.getElementById('order-feed').innerHTML = orderHtml
+    
   }
+  calcOrder()
+  document.getElementById('totalH').innerText = totalStng
   
+  showOrder()
+}
+}
+
+
+
+calcOrder () {
+  
+  order.forEach((ord) {
+    total += ord.id
+  })
+  const initialValue = 0
+  totalStng = total.reduce((previousValue, currentValue) => previousValue + currentValue,
+  initialValue)
 }
 
 function showOrder() {
   if(order.length) {
-    document.getElementById("checko").classList.toggle('hidden') 
+    document.getElementById("checko").classList.remove('hidden') 
+  } else {
+    document.getElementById("checko").classList.add('hidden')
   }
 }
 
