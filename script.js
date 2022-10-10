@@ -61,36 +61,52 @@ function renderOrder() {
      // console.log(ord)
       orderHtml += `<div class="item-price-2">$ ${ord.price}</div>
         <div class="remove-item-btn" data-idd="${ord.id}">remove</div>
-        <div class="item-name-2">${ord.name}</div>`
+        <div class="item-name-2">${ord.name}</div> <div class="divider3"></div>
+        <div class="total-price-text">Total price:</div>
+        <div id="totalH" class="total-price-div"> $ ${calcOrder()}</div>
+`
+
       
       
     })
 //console.log(orderHtml)
     document.getElementById('order-feed').innerHTML = orderHtml
     
+  
+ 
   }
-  calcOrder()
-  document.getElementById('totalH').innerText = totalStng
+  
   
   showOrder()
 }
-}
 
 
 
-calcOrder () {
+
+
+function calcOrder() {
   
-  order.forEach((ord) {
-    total += ord.id
+  order.forEach((ord) => {
+    if(!total.includes(ord.id)){
+    total.push(ord.price) 
+    console.log(total)
+      }
   })
   const initialValue = 0
-  totalStng = total.reduce((previousValue, currentValue) => previousValue + currentValue,
+  let totalSt = total.reduce((previousValue, currentValue) => previousValue + currentValue,
   initialValue)
+  return totalSt
 }
+
+
+
+
+
 
 function showOrder() {
   if(order.length) {
     document.getElementById("checko").classList.remove('hidden') 
+   
   } else {
     document.getElementById("checko").classList.add('hidden')
   }
