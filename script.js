@@ -14,6 +14,17 @@ document.addEventListener('click', function(e){
     }
     
 })
+const modal = document.querySelector(".modal");
+const submitBtn = document.getElementById("sub-btn")
+const secBtn = document.getElementById("second-sub")
+
+submitBtn.addEventListener('click', toggleModal)
+
+secBtn.addEventListener('click', (e) => {
+  e.preventDefault()
+  console.log('who goes')
+  showThanks()
+})
 
 let order = []
 
@@ -28,11 +39,19 @@ function handleOrder(id) {
   menuArray.forEach((item) => {
     
     if(item.id == id) {
-
+      
+  
+      
       let newObj = {}
       newObj = item
       //console.log(item)
-      order.push(newObj)
+      if(order.some(ord => ord.id === newObj.id)){
+    console.log(newObj.id)
+} else{
+   order.push(newObj)
+}
+     
+      
       
       
       
@@ -56,7 +75,7 @@ function removeOrder(id) {
 function renderOrder() {
   
   let orderHtml = ``
-  if(order.length) {
+  if(order.length ) {
     order.forEach((ord) => {
      // console.log(ord)
       orderHtml += `<div class="item-price-2">$ ${ord.price}</div>
@@ -87,10 +106,14 @@ function renderOrder() {
 function calcOrder() {
   
   order.forEach((ord) => {
-    if(!total.includes(ord.id)){
-    total.push(ord.price) 
+    if(total.includes(ord.price)){
+    
     console.log(total)
+      } else {
+      total.push(ord.price) 
+      console.log(total)
       }
+    
   })
   const initialValue = 0
   let totalSt = total.reduce((previousValue, currentValue) => previousValue + currentValue,
@@ -140,6 +163,31 @@ function getFeedHtml(){
       `
    })
    return feedHtml 
+}
+
+function toggleModal() {
+  
+    modal.classList.toggle("hidden");
+}
+
+function showThanks() {
+  console.log("clicked")
+  toggleModal()
+  let message = `<div class="group-div1">
+        <div class="rectangle-div4"></div>
+        <div class="order-details-div">
+          <div class="group-div2">
+            <div class="group-div2">
+              <div class="group-div2">
+                <div class="thanks-james-your-order-is-o">
+                  Thanks, James! Your order is on its way!
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>`
+    document.getElementById("checko").classList.add('hidden')
 }
 
 function render(){

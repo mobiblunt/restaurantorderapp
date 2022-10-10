@@ -28,9 +28,10 @@
   </head>
   <body>
     <div class="pre-checkout-state-div">
+      
       <div class="checkout-section-div hidden" id="checko">
         <div class="purchase-btn-div">
-          <b class="btn-text">Complete order</b>
+          <b id="sub-btn" class="btn-text">Complete order</b>
         </div>
         <div id="order-feed">
 
@@ -64,7 +65,20 @@
           The best burgers and pizzas in town.
         </div>
       </div>
+    <div class="modal hidden">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h3>Enter Card Details</h3>
+      <form>
+      <input type="text" required placeholder="Enter Name" />
+      <input type="number" required placeholder="Enter Card Number" />
+      <input type="number" required placeholder="Enter Cvv" />
+      <button id="second-sub">Pay</button>
+        </form>
     </div>
+</div>
+    </div>
+     
 
     <script type="module" src="script.js"></script>
   </body>

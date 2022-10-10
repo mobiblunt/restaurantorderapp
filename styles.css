@@ -257,6 +257,131 @@ body {
   font-size: var(--font-size-4xl);
   color: var(--white);
 }
+
+Tools
+Demos
+Donate
+Dark mode toggler
+Home  Tutorials  How To Create a Modal Popup Box with CSS and JavaScript
+How To Create a Modal Popup Box with CSS and JavaScript
+Updated on Dec 23, 2021 by Alan Morel
+@AlanMorelX
+#html
+ 
+#css
+ 
+#javascript
+How To Create a Modal Popup Box with CSS and JavaScript
+Table of Contents
+Introduction
+HTML Markup
+CSS Styles
+JavaScript Code
+Conclusion
+
+Join our Newsletter
+Get weekly posts to your inbox
+Enter your email
+ 
+
+Getting Started with JavaScript
+Getting Started with JavaScript
+Getting Started with PHP
+Getting Started with PHP
+Getting Started with Python
+Getting Started with Python
+Getting Started with Vue
+Getting Started with Vue
+
+Best VS Code Extensions for 2022
+Best VS Code Extensions for 2022
+Set Up a Web Server using Node
+Set Up a Web Server using Node
+Getting Started with Electron
+Getting Started with Electron
+Learn how to use Git
+Learn how to use Git
+
+In this tutorial, we learn how to make a modal with CSS and JavaScript. Our goal is to create a lightweight and simple modal popup box that does not use any third-party libraries and is cross-browser compatible. We will be using vanilla JavaScript without jQuery. Because we will be building it from scratch, we will have full control over how it looks and functions.
+
+Introduction
+Modal popups are used pretty frequently on the web. Some popular uses of them include driving newsletter sign ups, displaying notifications/alerts, and handling register and login forms.
+
+Our modal will be generic which means you will be free to use it for whatever purpose you'd like. Here's what they will look like once finished:
+
+The modal before opening.
+The modal before opening.
+The modal after opening.
+The modal after opening.
+You can view a live demo of the finished product before continuing on. Now, let's get started on building this!
+
+
+HTML Markup
+Let's start with the HTML markup for the modal.
+
+<button class="trigger">Click here to trigger the modal!</button>
+<div class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h1>Hello, I am a modal!</h1>
+    </div>
+</div>
+We have three different components here in the markup.
+
+First, we have a simple button which, when clicked on, triggers the modal to open. Then we have the modal's parent container which houses the modal. Finally, we have the content that will go inside the modal, plus a close button.
+
+To keep things simple, the only content inside the modal is an h1 tag with some text.
+
+CSS Styles
+These are the styles we will apply to make our modal look nice and pretty.
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+  
+}
+
+.modal-content {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1rem 1.5rem;
+    width: 24rem;
+    border-radius: 0.5rem;
+  filter: drop-shadow(5.18654px 5.18654px 255.437px rgba(0, 0, 0, 0.5));
+}
+
+.close-button {
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: lightgray;
+}
+
+.close-button:hover {
+    background-color: darkgray;
+}
+
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
 .pre-checkout-state-div {
   position: relative;
   background-color: var(--white);
