@@ -18,11 +18,13 @@ const modal = document.querySelector(".modal");
 const submitBtn = document.getElementById("sub-btn")
 const secBtn = document.getElementById("second-sub")
 
+let checKo = document.getElementById("checko")
+
 submitBtn.addEventListener('click', toggleModal)
 
 secBtn.addEventListener('click', (e) => {
   e.preventDefault()
-  console.log('who goes')
+  //console.log('who goes')
   showThanks()
 })
 
@@ -33,6 +35,8 @@ let isShown = false
 let total = []
 
 let totalStng = ""
+
+
 
 function handleOrder(id) {
 //console.log(id)
@@ -187,7 +191,9 @@ function showThanks() {
           </div>
         </div>
       </div>`
-    document.getElementById("checko").classList.add('hidden')
+    checKo.classList.add('hidden')
+    checKo.innerHTML = message
+  checKo.classList.remove('hidden') 
 }
 
 function render(){
