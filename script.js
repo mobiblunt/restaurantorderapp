@@ -24,8 +24,9 @@ submitBtn.addEventListener('click', toggleModal)
 
 secBtn.addEventListener('click', (e) => {
   e.preventDefault()
-  //console.log('who goes')
-  showThanks()
+  
+ 
+  showThanks(document.getElementById("namecc").value)
 })
 
 let order = []
@@ -174,8 +175,8 @@ function toggleModal() {
     modal.classList.toggle("hidden");
 }
 
-function showThanks() {
-  console.log("clicked")
+function showThanks(name) {
+  //console.log("clicked")
   toggleModal()
   let message = `<div class="group-div1">
         <div class="rectangle-div4"></div>
@@ -184,7 +185,7 @@ function showThanks() {
             <div class="group-div2">
               <div class="group-div2">
                 <div class="thanks-james-your-order-is-o">
-                  Thanks, James! Your order is on its way!
+                  Thanks, ${name}! Your order is on its way!
                 </div>
               </div>
             </div>
